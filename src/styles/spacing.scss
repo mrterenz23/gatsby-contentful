@@ -1,0 +1,49 @@
+$sizes: 100;
+@mixin margin-classes {
+  @for $i from 1 through $sizes {
+     $margin: $i * 1px;
+    .ml#{$i} {margin-left: $margin;}
+    .mr#{$i} {margin-right: $margin;}
+    .mt#{$i} {margin-top: $margin;}
+    .mb#{$i} {margin-bottom: $margin;}
+  }
+}
+@include margin-classes;
+
+
+@mixin padding-classes {
+  @for $i from 1 through $sizes {
+    $padding: $i * 0.25rem;
+    .pl#{$i} {padding-left: $padding;}
+    .pr#{$i} {padding-right: $padding;}
+    .pt#{$i} {padding-top: $padding;}
+    .pb#{$i} {padding-bottom: $padding;}
+  }
+}
+@include padding-classes;
+
+// mobile
+@media (max-width: 767px) {
+  @mixin margin-classes {
+    @for $i from 1 through $sizes {
+       $margin: $i * 1px;
+      .sp-ml#{$i} {margin-left: $margin;}
+      .sp-mr#{$i} {margin-right: $margin;}
+      .sp-mt#{$i} {margin-top: $margin;}
+      .sp-mb#{$i} {margin-bottom: $margin;}
+    }
+  }
+  @include margin-classes;
+
+
+  @mixin padding-classes {
+    @for $i from 1 through $sizes {
+      $padding: $i * 0.25rem;
+      .sp-pl#{$i} {padding-left: $padding;}
+      .sp-pr#{$i} {padding-right: $padding;}
+      .sp-pt#{$i} {padding-top: $padding;}
+      .sp-pb#{$i} {padding-bottom: $padding;}
+    }
+  }
+  @include padding-classes;
+}
