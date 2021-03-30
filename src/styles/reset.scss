@@ -1,0 +1,37 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+p {
+  line-height: 1.5;
+}
+section, time, small, label {
+  display: block;
+}
+button {
+  border: none;
+  outline: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

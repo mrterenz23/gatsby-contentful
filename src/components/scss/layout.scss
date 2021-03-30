@@ -1,0 +1,133 @@
+.container {
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 1024px;
+	width: 100%;
+}
+.container-lg {
+	max-width: 1124px;
+}
+.main-content {
+	padding-top: 120px;
+	min-height: 100vh;
+}
+
+.technology-block {
+	position: relative;
+	margin-top: 96px;
+	&:before {
+		background: #ff0;
+	    content: "";
+	    height: 880px;
+	    left: 0;
+	    position: absolute;
+	    width: 100%;
+	    z-index: -1;
+	}
+	.technology-row {
+		display: flex;
+		align-items: center;
+	}
+	.technology-left,
+	.technology-right {
+		width: 50%;
+	}
+	.technology-left {
+		.technology-content {
+			margin: 0 auto;
+		}
+	}
+	.technology-right {
+		.technology-content {
+			margin-left: 88px;
+		}
+	}
+	.technology-content {
+		max-width: 320px;
+		h3 {
+			font-size: 32px;
+			line-height: 48px;
+			font-weight: 400;
+		}
+		p {
+			font-size: 16px;
+			line-height: 24px;
+			margin-top: 24px;
+		}
+	}
+	.technology-right {
+		img {
+			width: 408px;
+			height: 700px;
+			object-fit: cover;
+			object-position: right;
+			margin-top: -64px;
+		}
+	}
+	.technology-left {
+		img {
+			width: 100%;
+			height: 632px;
+			object-fit: cover;
+			object-position: left;
+		}
+	}
+}
+
+.service-block {
+	display: flex;
+	margin-top: 128px;
+	.service-header {
+		width: 33%;
+		padding-right: 32px;
+		h3 {
+			font-size: 48px;
+			font-weight: 400;
+		}
+		a {
+			color: #53575a;
+			font-size: 24px;
+			font-weight: 500;
+			text-decoration: underline;
+			margin-top: 30px;
+			display: inline-block;
+		}
+	}
+	.service-list {
+		width: 67%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.service {
+			position: relative;
+			background: #eff0f0;
+			color: #53575a;
+			width: calc(50% - 16px);
+		    height: 325px;
+		    display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			margin-bottom: 32px;
+		    padding: 32px;
+		    h3 {
+				font-size: 24px;
+				font-weight: 500;
+				line-height: 36px;
+		    }
+		    p {
+				font-size: 16px;
+				line-height: 24px;
+		    	padding-right: 70px;
+		    }
+		    .service-btn {
+			    background: #ff0 url(../../../src/images/arrow_right.png) 50% no-repeat;
+			    width: 64px;
+			    height: 64px;
+			    position: absolute;
+			    right: 0;
+			    bottom: 32px;
+			}
+		}
+	}
+}
