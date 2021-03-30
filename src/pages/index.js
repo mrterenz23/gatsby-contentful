@@ -69,6 +69,15 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
+      <div className="container">
+        <div className="client-block">
+          <img src={`images/Gardens-by-the-bay.png`} alt="" />
+          <img src={`images/Fujitsu.png`} alt="" />
+          <img src={`images/Chr-Hansen.png`} alt="" />
+          <img src={`images/HSBC.png`} alt="" />
+          <img src={`images/Shake-Shack.png`} alt="" />
+        </div>
+      </div>
     </Layout>
   )
 }
