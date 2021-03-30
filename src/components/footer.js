@@ -16,7 +16,7 @@ const Footer = () => {
 
 	return (
 		<footer className={footerStyles.footer}>
-			
+			This is my footer
 		</footer>
 	)
 }
