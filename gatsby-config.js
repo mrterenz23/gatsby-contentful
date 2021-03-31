@@ -26,6 +26,7 @@ module.exports = {
 			}
 		},
 		'gatsby-plugin-sharp',
+		'gatsby-plugin-no-index',
 	],
 	pathPrefix: "/gatsby-contentful",
 }
