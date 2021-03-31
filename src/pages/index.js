@@ -1,17 +1,18 @@
-import React from "react"
+import React from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
 const IndexPage = () => {
   return (
     <Layout>
-      <div className="container container-lg">
+      <div className="grid grid-lg">
         <div className="technology-block">
-          <div className="container">
+          <div className="grid">
             <div className="technology-row">
               <div className="technology-left">
                 <div className="technology-content">
-                  <h3>We shape technology that inspires people and grows businesses.</h3>
+                  <h2>We shape technology that inspires people and grows businesses.</h2>
                   <p>Our technology starts with people because if they’re inspired, you succeed.We deliver expert engineering and stunning design to unleash growth for your business, customers and society. Across 25 global offices, over 1200 experts work at pace to make sure your investment makes a meaningful impact.</p>
                 </div>
               </div>
@@ -22,7 +23,7 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          <div className="container-fluid">
+          <div className="grid-fluid">
             <div className="technology-row">
               <div className="technology-left">
                 <div className="technology-left-image">
@@ -31,7 +32,7 @@ const IndexPage = () => {
               </div>
               <div className="technology-right">
                 <div className="technology-content">
-                  <h3>A human approach to consulting.</h3>
+                  <h2>A human approach to consulting.</h2>
                   <p>We know digital transformation projects can be long and expensive but we aim to be different.Different means partnership, transparency, and impact. It means driving company-wide change and customer-centered design. Most Importantly, it means delivery. We rigorously unlock value to bring you results.</p>
                 </div>
               </div>
@@ -39,11 +40,11 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="grid">
         <div className="service-block">
           <div className="service-header">
-            <h3>Services</h3>
-            <a href="">See all our services</a>
+            <h2>Services</h2>
+            <Link to="/">See all our services</Link>
           </div>
           <div className="service-list">
             <a href="" className="service">
@@ -69,13 +70,200 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="grid">
         <div className="client-block">
           <img src={`images/Gardens-by-the-bay.png`} alt="" />
           <img src={`images/Fujitsu.png`} alt="" />
           <img src={`images/Chr-Hansen.png`} alt="" />
           <img src={`images/HSBC.png`} alt="" />
           <img src={`images/Shake-Shack.png`} alt="" />
+        </div>
+      </div>
+      <div className="grid grid-lg">
+        <div className="case-block">
+          <div className="grid">
+            <div className="header-block">
+              <h2>Case closed.<br/>Over 2200 successful projects, worldwide.</h2>
+              <Link to="/">Visit our cases</Link>
+            </div>
+            <div className="case-gallery">
+              <div className="case-gallery-item">
+                <div className="case-gallery-image">
+                  <img src={`images/case-img-1.jpg`} />
+                </div>
+                <a href="" className="case-gallery-content">
+                  <div className="case-study">Case study <span>Shake Shack</span></div>
+                  <div className="case-title">Transforming how Shake Shack Delivers Hospitality</div>
+                </a>
+              </div>
+              <div className="case-gallery-item">
+                <div className="case-gallery-image">
+                  <img src={`images/case-img-2.jpg`} />
+                </div>
+                <a href="" className="case-gallery-content">
+                  <div className="case-study">Case study <span>Mashreq Bank</span></div>
+                  <div className="case-title">All-new Retail Banking Platform Built on Sitecore 9.3</div>
+                </a>
+              </div>
+              <div className="case-gallery-item">
+                <div className="case-gallery-image">
+                  <img src={`images/case-img-3.jpg`} />
+                </div>
+                <a href="" className="case-gallery-content">
+                  <div className="case-study">Case study <span>Chr. Hansen</span></div>
+                  <div className="case-title">Ensuring Milk Safety by Making Critical Technology Accessible</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="grid">
+        <div className="insight-block">
+          <div className="header-block">
+            <h2>Latest Insights - We help you stay up to date.</h2>
+            <Link to="/">Visit Thought Leadership</Link>
+          </div>
+          <div className="insight-content">
+            <div className="insight-content-left">
+              <a href="" className="insight-item">
+                <img src={`images/insight-img-1.jpg`} alt="" />
+                <div className="insight-details">
+                  <span className="position">Head of Product Management</span>
+                  <span className="name">Luke Gallimore</span>
+                  <span className="time">— &nbsp;10 min. read</span>
+                </div>
+                <h3 className="insight-title">How to Manage Your Product’s Strategy & Roadmap Throughout its Life Cycle.</h3>
+              </a>
+            </div>
+            <div className="insight-content-right">
+              <a href="" className="insight-item">
+                <div className="insight-content-block">
+                  <div className="insight-details">
+                    <span className="position">Marketing Manager</span>
+                    <span className="name">Thomas Lockhart</span>
+                  </div>
+                  <h3 className="insight-title">How Employee Apps Are the Backbone of Successful Enterprises</h3>
+                  <span className="time">9 min read</span>
+                </div>
+                <div className="insight-content-image">
+                  <img src={`images/insight-img-2.jpg`} alt="" />
+                </div>
+              </a>
+              <a href="" className="insight-item">
+                <div className="insight-content-block">
+                  <div className="insight-details">
+                    <span className="position">Marketing Manager</span>
+                    <span className="name">Thomas Lockhart</span>
+                  </div>
+                  <h3 className="insight-title">Agile in the face of COVID-19: What it takes to launch a virtual film festival in 14 days</h3>
+                  <span className="time">9 min read</span>
+                </div>
+                <div className="insight-content-image">
+                  <img src={`images/insight-img-3.jpg`} alt="" />
+                </div>
+              </a>
+              <a href="" className="insight-item">
+                <div className="insight-content-block">
+                  <div className="insight-details">
+                    <span className="position">Marketing Manager</span>
+                    <span className="name">Thomas Lockhart</span>
+                  </div>
+                  <h3 className="insight-title">How Employee Apps Are the Backbone of Successful Enterprises</h3>
+                  <span className="time">9 min read</span>
+                </div>
+                <div className="insight-content-image">
+                  <img src={`images/insight-img-4.jpg`} alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-lg">
+        <div className="borderless-block">
+          <div className="grid">
+            <div className="borderless-row">
+              <div className="borderless-left">
+                <div className="borderless-content">
+                  <h2>Bold and Borderless.</h2>
+                  <p>We are consultants but, above all, engineers, product experts, and designers who excel at strategy and delivery. While we're experts in the latest technology, we're practitioners of the best. Digital transcends borders and so do we. We select the best people worldwide to bring you boutique service at scale.</p>
+                </div>
+              </div>
+              <div className="borderless-right">
+                <div className="borderless-right-image">
+                  <img src={`images/borderless-img-1.png`} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="grid-fluid">
+            <div className="borderless-row">
+              <div className="borderless-left">
+                <div className="borderless-left-image">
+                  <img src={`images/borderless-img-2.png`} alt="" />
+                </div>
+              </div>
+              <div className="borderless-right borderless-count">
+                <div className="borderless-content">
+                  <h2>27.</h2>
+                  <h3>Offices Worldwide</h3>
+                  <a href="">Locations</a>
+                </div>
+                <div className="borderless-content">
+                  <h2>1200+</h2>
+                  <h3>Memebers</h3>
+                  <a>Careers</a>
+                </div>
+                <div className="borderless-content">
+                  <h2>2200+</h2>
+                  <h3>Cases delivered</h3>
+                  <a href="">Cases</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container-fluid">
+            <div className="borderless-right-bottom-image">
+              <img src={`images/borderless-img-3.png`} alt=""/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="grid">
+        <div className="news-block">
+          <div className="header-block">
+            <h2>Latest news.</h2>
+            <Link to="/">See all news</Link>
+          </div>
+          <div className="news-list">
+            <a href="" className="news-item news-latest">
+              <div className="news-item-details">
+                <time>Oct 01, 2020</time>
+                <h3>Andreas Rasmussen takes on the new role as CGO of Monstar Lab Group.</h3>
+                <p>Nodes’ CEO takes on a new role as Monstar Lab’s Chief Growth Officer. In his new role, he will focus on generating growth and developing a unified company culture across all offices.</p>
+              </div>
+              <div className="news-item-image">
+                <img src={`images/news-img-1.png`} alt="" />
+              </div>
+            </a>
+            <a href="" className="news-item">
+              <time>Sep 30, 2020</time>
+              <h3>Monstar Lab opens new Colombia office to bolster presence in the Americas</h3>
+            </a>
+            <a href="" className="news-item">
+              <time>Aug 07, 2020</time>
+              <h3>Monstar Lab raised a total funding of 4.2 billion JPY</h3>
+            </a>
+            <a href="" className="news-item">
+              <time>Jun 05, 2020</time>
+              <h3>Monstar Lab Group appoints Mark Jones as Chief Strategy & Consultancy Officer</h3>
+            </a>
+            <a href="" className="news-item">
+              <time>Jun 01, 2020</time>
+              <h3>Announcement of new management for our subsidiary, asian tech</h3>
+            </a>
+          </div>
         </div>
       </div>
     </Layout>
