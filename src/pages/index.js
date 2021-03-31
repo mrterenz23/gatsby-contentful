@@ -1,9 +1,50 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allNews: allContentfulNews (
+          sort: {
+            fields:publishedDate,
+            order:DESC
+          }
+        ) {
+        edges {
+          node {
+            title
+            slug
+            description
+            publishedDate(formatString:"MMM DD, YYYY")
+          }
+        }
+      },
+      latestNews: allContentfulNews (
+          sort: {
+            fields:publishedDate,
+            order:DESC
+          },
+          limit: 1
+        ) {
+        edges {
+          node {
+            title
+            slug
+            description
+            thumbnail {
+              file {
+                url
+              }
+            }
+            publishedDate(formatString:"MMM DD, YYYY")
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <div className="grid grid-lg">
@@ -237,32 +278,28 @@ const IndexPage = () => {
             <Link to="/">See all news</Link>
           </div>
           <div className="news-list">
-            <a href="" className="news-item news-latest">
-              <div className="news-item-details">
-                <time>Oct 01, 2020</time>
-                <h3>Andreas Rasmussen takes on the new role as CGO of Monstar Lab Group.</h3>
-                <p>Nodes’ CEO takes on a new role as Monstar Lab’s Chief Growth Officer. In his new role, he will focus on generating growth and developing a unified company culture across all offices.</p>
-              </div>
-              <div className="news-item-image">
-                <img src={`images/news-img-1.png`} alt="" />
-              </div>
-            </a>
-            <a href="" className="news-item">
-              <time>Sep 30, 2020</time>
-              <h3>Monstar Lab opens new Colombia office to bolster presence in the Americas</h3>
-            </a>
-            <a href="" className="news-item">
-              <time>Aug 07, 2020</time>
-              <h3>Monstar Lab raised a total funding of 4.2 billion JPY</h3>
-            </a>
-            <a href="" className="news-item">
-              <time>Jun 05, 2020</time>
-              <h3>Monstar Lab Group appoints Mark Jones as Chief Strategy & Consultancy Officer</h3>
-            </a>
-            <a href="" className="news-item">
-              <time>Jun 01, 2020</time>
-              <h3>Announcement of new management for our subsidiary, asian tech</h3>
-            </a>
+            {data.latestNews.edges.map((edge) => {
+              return (
+                <a href="" className="news-item news-latest">
+                  <div className="news-item-details">
+                    <time>{edge.node.publishedDate}</time>
+                    <h3>{edge.node.title}</h3>
+                    <p>{edge.node.description}</p>
+                  </div>
+                  <div className="news-item-image">
+                    <img src={edge.node.thumbnail.file.url} alt="" />
+                  </div>
+                </a>
+              )
+            })}
+            {data.allNews.edges.map((edge) => {
+              return (
+                <a href="" className="news-item">
+                  <time>{edge.node.publishedDate}</time>
+                  <h3>{edge.node.title}</h3>
+                </a>
+              )
+            })}
           </div>
         </div>
       </div>

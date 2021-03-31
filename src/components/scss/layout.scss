@@ -420,6 +420,9 @@
 			margin: 0 0 4px;
 			padding: 48px;
 			text-decoration: none;
+			&:nth-child(2) {
+				display: none;
+			}
 			&.news-latest {
 				display: flex;
 				flex-wrap: wrap;
