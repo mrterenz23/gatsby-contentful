@@ -16,8 +16,8 @@ const IndexPage = () => {
           node {
             title
             slug
-            description
             publishedDate(formatString:"MMM DD, YYYY")
+            description
           }
         }
       },
