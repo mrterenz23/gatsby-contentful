@@ -73,7 +73,7 @@ const IndexPage = () => {
               </div>
               <div className="technology-right">
                 <div className="technology-content">
-                  <h2>A human approach to consulting.</h2>
+                  <h2>A human approach to consultings.</h2>
                   <p>We know digital transformation projects can be long and expensive but we aim to be different.Different means partnership, transparency, and impact. It means driving company-wide change and customer-centered design. Most Importantly, it means delivery. We rigorously unlock value to bring you results.</p>
                 </div>
               </div>
